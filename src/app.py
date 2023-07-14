@@ -1,6 +1,8 @@
 from flask import Flask
 import os
 from flasgger import Swagger
+from waitress import serve
+
 from src.database import db
 
 from src.config.swagger import template, swagger_config
@@ -19,5 +21,5 @@ app.config.from_mapping(
 db.app = app
 db.init_app(app)
 app.register_blueprint(studentBlueprint)
-
+serve(app, host='127.0.0.1', port=8087)  # Replace the host and port with your desired values
 Swagger(app, config=swagger_config, template=template)
