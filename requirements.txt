@@ -25,3 +25,4 @@ Werkzeug==2.2.2
 zipp==3.5.0
 virtualenv==20.23.1
 psycopg2==2.9.6
+gevent==21.12.0
