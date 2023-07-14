@@ -1,0 +1,27 @@
+tags:
+  - Delete Existing student
+
+parameters:
+  - name: body
+    description: The body should contain the student information First name and last name to delete
+    in: body
+    required: true
+    schema:
+     type: object
+     required:
+      - "FirstName"
+      - "LastName"
+     properties:
+      FirstName:
+        type: "string"
+        example: "Wilson"
+      LastName:
+        type: "string"
+        example: "John"
+responses:
+  200:
+    description: Student removed from database
+  401:
+    description: Service Not Found
+  500:
+    description: Internal server error

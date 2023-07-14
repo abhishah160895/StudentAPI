@@ -1,0 +1,11 @@
+tags:
+  - get all students information.
+
+
+responses:
+  200:
+    description: Get all students information in college.
+  401:
+    description: Not Found.
+  500:
+    description: internal service error.
