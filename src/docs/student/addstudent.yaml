@@ -1,0 +1,35 @@
+tags:
+  - Add new student
+
+parameters:
+  - name: body
+    description: The body should contain the student information
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "FirstName"
+        - "LastName"
+      properties:
+        FirstName:
+          type: "string"
+          example: "Wilson"
+        LastName:
+          type: "string"
+          example: "John"
+        DOB:
+          type: "Date"
+          example: "1995-08-16"
+        Amount_Due:
+          type: "decimal"
+          example : 750.68
+responses:
+  200:
+    description: Student successfully saved in database
+
+  401:
+    description: Service Not Found
+
+  500:
+    description: Internal server error

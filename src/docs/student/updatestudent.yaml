@@ -1,0 +1,37 @@
+tags:
+  - Update Existing student
+
+parameters:
+  - name: body
+    description: The body should contain the student information that need to update
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "StudentId"
+      properties:
+        StudentId:
+          type: "integer"
+          example: 101
+        FirstName:
+          type: "string"
+          example: "John"
+        LastName:
+          type: "string"
+          example: "Wilson"
+        DOB:
+          type: "Date"
+          example: "1995-08-16"
+        Amount_Due:
+          type: "decimal"
+          example : 750.68
+responses:
+  200:
+    description: Student detail updated successfully
+
+  401:
+    description: Service Not Found
+
+  500:
+    description: Internal server error
