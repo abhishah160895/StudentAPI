@@ -1,4 +1,4 @@
-from src.database import student
+from database import student
 
 
 class studentBO(object):
