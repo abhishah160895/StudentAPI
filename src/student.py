@@ -3,10 +3,10 @@ from flask import Blueprint, request, jsonify
 from flasgger import swag_from
 
 
-from src.constants.http_status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_401_UNAUTHORIZED, HTTP_409_CONFLICT
-from src.database import student, db
-from src.datamodel.student import studentBO
-from src.json_utility import json_default
+from constants.http_status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_401_UNAUTHORIZED, HTTP_409_CONFLICT
+from database import student, db
+from datamodel.student import studentBO
+from json_utility import json_default
 
 studentBlueprint = Blueprint("auth", __name__, url_prefix="/api/v1/student")
 
